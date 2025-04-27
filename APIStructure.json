@@ -1,0 +1,48 @@
+{
+    "name": "Star Wars: Episode IV",
+    "genre": "Science Fiction",
+    "release-year": "1977-05-25",
+    "length-minutes": "121",
+    "parental-rating": "PG",
+    "rating": 5,
+    "production-company": {
+        "name": "Lucas Film",
+        "foundation-date": "1971-04-01",
+        "headquarters-state": "California",
+        "headquarters-country": "United States"
+    },
+    "producer": {
+        "full-name": "George Walton Lucas Jr.",
+        "aka": "George Lucas",
+        "age": 80,
+        "birth-date": "1944-05-14",
+        "birthplace-state": "California",
+        "birthpalce-country": "United States"
+    },
+    "cast": [
+        {
+            "full-name": "Mark Richard Hamill",
+            "aka": "Mark Hamill",
+            "age": 73,
+            "birth-date": "1951-09-25",
+            "birthplace-state": "California",
+            "birthpalce-country": "United States"
+        },
+        {
+            "full-name": "Harrison Ford",
+            "aka": "Harrison Ford",
+            "age": 82,
+            "birth-date": "1942-07-13",
+            "birthplace-state": "Illinois",
+            "birthpalce-country": "United States"
+        },
+        {
+            "full-name": "Carrie Frances Fisher",
+            "aka": "Carrie Fisher",
+            "age": 60,
+            "birth-date": "1956-10-21",
+            "birthplace-state": "California",
+            "birthpalce-country": "United States"
+        }
+    ]
+}
