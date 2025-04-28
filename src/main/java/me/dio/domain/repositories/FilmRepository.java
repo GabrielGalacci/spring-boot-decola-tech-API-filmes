@@ -8,6 +8,6 @@ import me.dio.domain.model.Film;
 @Repository
 public interface FilmRepository extends JpaRepository<Film, Long> {
 
-    boolean existsByName(String name);
+    boolean existsByFilmName(String name);
 
 }
