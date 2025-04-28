@@ -29,7 +29,7 @@ public class Film {
 
     private String parentalRating;
 
-    private Integer rating;
+    private Double rating;
 
     @OneToOne(cascade = CascadeType.ALL)
     private ProductionCompany productionCompany;
@@ -38,7 +38,7 @@ public class Film {
     private Producer producer;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<CastMember> cast;
+    private List<CastMember> castMembers;
 
     public long getId() {
         return id;
@@ -88,11 +88,11 @@ public class Film {
         this.parentalRating = parentalRating;
     }
 
-    public Integer getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 
@@ -113,10 +113,10 @@ public class Film {
     }
 
     public List<CastMember> getCast() {
-        return cast;
+        return castMembers;
     }
 
-    public void setCast(List<CastMember> cast) {
-        this.cast = cast;
+    public void setCast(List<CastMember> castMembers) {
+        this.castMembers = castMembers;
     }
 }
