@@ -11,7 +11,7 @@ import me.dio.domain.model.Film;
 
 public record FilmDTO(
     Long id,
-    String name,
+    String filmName,
     String genre,
     Date releaseYear,
     Integer lengthMinutes,
@@ -39,8 +39,10 @@ public record FilmDTO(
 
     public Film toModel() {
         Film model = new Film();
-        model.setId(this.id);
-        model.setName(this.name);
+        if (this.id != null) { // Only set id if it is present
+            model.setId(this.id);
+        }
+        model.setName(this.filmName);
         model.setGenre(this.genre);
         model.setReleaseYear(this.releaseYear);
         model.setLengthMinutes(this.lengthMinutes);

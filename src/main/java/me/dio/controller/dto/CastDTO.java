@@ -13,7 +13,9 @@ public record CastDTO(Long id, String fullName, String aka, Integer age, Date bi
 
     public CastMember toModel() {
         CastMember model = new CastMember();
-        model.setId(this.id);
+        if (this.id != null) { // Only set id if it is present
+            model.setId(this.id);
+        }
         model.setFullName(this.fullName);
         model.setAka(this.aka);
         model.setAge(this.age);

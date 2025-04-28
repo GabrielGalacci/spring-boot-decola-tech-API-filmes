@@ -19,7 +19,7 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private String filmName;
 
     private String genre;
 
@@ -49,11 +49,11 @@ public class Film {
     }
 
     public String getName() {
-        return name;
+        return filmName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.filmName = name;
     }
 
     public String getGenre() {
