@@ -1,6 +1,8 @@
 package me.dio.domain.model;
 
-import java.util.Date;
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +18,8 @@ public class ProductionCompany {
 
     private String name;
 
-    private Date foundationDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate foundationDate;
 
     private String headquartersState;
 
@@ -38,11 +41,11 @@ public class ProductionCompany {
         this.name = name;
     }
 
-    public Date getFoundationDate() {
+    public LocalDate getFoundationDate() {
         return foundationDate;
     }
 
-    public void setFoundationDate(Date foundationDate) {
+    public void setFoundationDate(LocalDate foundationDate) {
         this.foundationDate = foundationDate;
     }
 

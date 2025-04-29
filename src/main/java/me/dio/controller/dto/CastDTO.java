@@ -1,11 +1,11 @@
 package me.dio.controller.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import me.dio.domain.model.CastMember;
 
 
-public record CastDTO(Long id, String fullName, String aka, Integer age, Date birthDate, String birthplaceState, String birthplaceCountry) {
+public record CastDTO(Long id, String fullName, String aka, Integer age, LocalDate birthDate, String birthplaceState, String birthplaceCountry) {
 
     public CastDTO(CastMember model) {
         this(model.getId(), model.getFullName(), model.getAka(), model.getAge(), model.getBirthDate(), model.getBirthplaceState(), model.getBirthplaceCountry());

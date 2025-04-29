@@ -1,6 +1,8 @@
 package me.dio.domain.model;
 
-import java.util.Date;
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,7 +22,8 @@ public abstract class Person {
 
     private Integer age;
 
-    private Date birthDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthDate;
 
     private String birthplaceState;
 
@@ -58,11 +61,11 @@ public abstract class Person {
         this.age = age;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 

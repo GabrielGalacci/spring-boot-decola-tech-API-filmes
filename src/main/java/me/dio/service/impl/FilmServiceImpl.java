@@ -58,7 +58,7 @@ public class FilmServiceImpl implements FilmService {
 
         dbFilm.setName(filmToUpdate.getName());
         dbFilm.setGenre(filmToUpdate.getGenre());
-        dbFilm.setReleaseYear(filmToUpdate.getReleaseYear());
+        dbFilm.setReleaseDate(filmToUpdate.getReleaseDate());
         dbFilm.setLengthMinutes(filmToUpdate.getLengthMinutes());
         dbFilm.setParentalRating(filmToUpdate.getParentalRating());
         dbFilm.setRating(filmToUpdate.getRating());

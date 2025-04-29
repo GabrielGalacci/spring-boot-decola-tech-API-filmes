@@ -1,10 +1,10 @@
 package me.dio.controller.dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import me.dio.domain.model.ProductionCompany;
 
-public record ProductionCompanyDTO(Long id, String name, Date foundationDate, String headquartersState, String headquartersCountry) {
+public record ProductionCompanyDTO(Long id, String name, LocalDate foundationDate, String headquartersState, String headquartersCountry) {
 
     public ProductionCompanyDTO(ProductionCompany model) {
         this(model.getId(), model.getName(), model.getFoundationDate(), model.getHeadquartersState(), model.getHeadquartersCountry());

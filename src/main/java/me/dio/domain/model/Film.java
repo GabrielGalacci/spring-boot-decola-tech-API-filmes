@@ -1,7 +1,9 @@
 package me.dio.domain.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -23,7 +25,8 @@ public class Film {
 
     private String genre;
 
-    private Date releaseYear;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate releaseDate;
 
     private Integer lengthMinutes;
 
@@ -64,12 +67,12 @@ public class Film {
         this.genre = genre;
     }
 
-    public Date getReleaseYear() {
-        return releaseYear;
+    public LocalDate getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setReleaseYear(Date releaseYear) {
-        this.releaseYear = releaseYear;
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public Integer getLengthMinutes() {

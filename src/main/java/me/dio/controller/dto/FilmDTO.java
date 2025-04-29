@@ -4,7 +4,7 @@ import static java.util.Collections.emptyList;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.toList;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import me.dio.domain.model.Film;
@@ -13,7 +13,7 @@ public record FilmDTO(
     Long id,
     String filmName,
     String genre,
-    Date releaseYear,
+    LocalDate releaseDate,
     Integer lengthMinutes,
     String parentalRating,
     Double rating,
@@ -27,7 +27,7 @@ public record FilmDTO(
             model.getId(),
             model.getName(),
             model.getGenre(),
-            model.getReleaseYear(),
+            model.getReleaseDate(),
             model.getLengthMinutes(),
             model.getParentalRating(),
             model.getRating(),
@@ -44,7 +44,7 @@ public record FilmDTO(
         }
         model.setName(this.filmName);
         model.setGenre(this.genre);
-        model.setReleaseYear(this.releaseYear);
+        model.setReleaseDate(this.releaseDate);
         model.setLengthMinutes(this.lengthMinutes);
         model.setParentalRating(this.parentalRating);
         model.setRating(this.rating);
